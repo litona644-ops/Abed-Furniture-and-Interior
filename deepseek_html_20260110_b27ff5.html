@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আবেদ ফার্ণিচার ও ইন্টেরিয়র</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hind Siliguri', 'Poppins', sans-serif;
+  background: #f9f7f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #1a1200 0%, #3a2800 100%);
+  color: white;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 3px solid #d4a762;
+  box-shadow: 0 0 15px rgba(212, 167, 98, 0.3);
+}
+
+.logo-text h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #f8f3e6;
+  font-weight: 700;
+}
+
+.logo-text p {
+  font-size: 14px;
+  color: #d4a762;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background: #d4a762;
+  color: #1a1200;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(26, 18, 0, 0.85), rgba(58, 40, 0, 0.85)), 
+              url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80') center/cover no-repeat;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 800px;
+  margin-bottom: 30px;
+  color: #f8f3e6;
+}
+
+.cta-button {
+  background: #d4a762;
+  color: #1a1200;
+  padding: 15px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s;
+  border: 2px solid #d4a762;
+  box-shadow: 0 5px 15px rgba(212, 167, 98, 0.3);
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: #d4a762;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(212, 167, 98, 0.4);
+}
+
+/* Section Styles */
+.section {
+  padding: 80px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #3a2800;
+  position: relative;
+  font-weight: 700;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background: #d4a762;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Products Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #3a2800;
+  font-weight: 600;
+}
+
+.card p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.price-tag {
+  display: inline-block;
+  background: #d4a762;
+  color: #1a1200;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Head Designer Section */
+.head-designer {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+  margin: 60px auto;
+  max-width: 1100px;
+  flex-wrap: wrap;
+}
+
+.designer-img {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.designer-img img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  height: 400px;
+  object-fit: cover;
+  border: 5px solid #d4a762;
+  box-shadow: 0 10px 30px rgba(212, 167, 98, 0.3);
+}
+
+.designer-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.designer-info h3 {
+  font-size: 32px;
+  color: #3a2800;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.designer-info p {
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.experience-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f3e6;
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-top: 20px;
+  color: #3a2800;
+  font-weight: 600;
+  border: 2px solid #d4a762;
+}
+
+/* Contact Section */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.contact-item {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.contact-item:hover {
+  transform: translateY(-10px);
+}
+
+.contact-icon {
+  font-size: 50px;
+  color: #d4a762;
+  margin-bottom: 20px;
+}
+
+.contact-item h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #3a2800;
+  font-weight: 600;
+}
+
+.contact-item p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  background: #3a2800;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  background: #d4a762;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #1a1200 0%, #3a2800 100%);
+  color: white;
+  padding: 50px 5% 30px;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #d4a762;
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(212, 167, 98, 0.3);
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Floating Buttons */
+.floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floating-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 26px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.floating-btn a:hover {
+  transform: scale(1.15);
+}
+
+.floating-btn a.whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+}
+
+.floating-btn a.facebook {
+  background: linear-gradient(135deg, #1877F2 0%, #0d5ab6 100%);
+}
+
+.floating-btn a.call {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}
+
+.tooltip {
+  position: absolute;
+  right: 75px;
+  background: rgba(26, 18, 0, 0.9);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  font-weight: 500;
+}
+
+.floating-btn a:hover .tooltip {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero h2 {
+    font-size: 32px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+  }
+  
+  .section {
+    padding: 50px 20px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .head-designer {
+    padding: 30px;
+    gap: 30px;
+  }
+  
+  .designer-img, .designer-info {
+    min-width: 100%;
+  }
+  
+  .floating-btn {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .floating-btn a {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://i.ibb.co.com/S4ZB9S14/ABED-FURNITURE-LOGO.jpg" alt="আবেদ ফার্ণিচার লোগো">
+    <div class="logo-text">
+      <h1>আবেদ ফার্ণিচার ও ইন্টেরিয়র</h1>
+      <p>প্রিমিয়াম কাঠের ফার্ণিচার ও ইন্টেরিয়র ডিজাইন</p>
+    </div>
+  </div>
+  
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#products">পণ্য সামগ্রী</a>
+    <a href="#designer">প্রধান ডিজাইনার</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h2>আধুনিক ঘরের জন্য প্রিমিয়াম ফার্ণিচার</h2>
+  <p>গুণগতমান, টেকসই ডিজাইন এবং যুগোপযোগী ফার্ণিচার ও ইন্টেরিয়র ডিজাইনের জন্য আমাদের সাথে থাকুন</p>
+  <a href="#products" class="cta-button">আমাদের পণ্য দেখুন</a>
+</div>
+
+<div class="section" id="products">
+  <h2 class="section-title">আমাদের ফার্ণিচার কালেকশন</h2>
+  <div class="products">
+    <!-- Row 1 -->
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1758&q=80" alt="লাক্সারি সোফা">
+      </div>
+      <div class="card-content">
+        <h3>লাক্সারি সোফা সেট</h3>
+        <p>উচ্চমানের লেদার ও ফ্যাব্রিক সোফা সেট, লিভিং রুমের জন্য পারফেক্ট</p>
+        <div class="price-tag">৳ ৪৫,০০০ - ৳ ১,২০,০০০</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="কিং সাইজ বেড">
+      </div>
+      <div class="card-content">
+        <h3>কিং সাইজ কাঠের বেড</h3>
+        <p>শক্ত মেহগনি কাঠ দিয়ে তৈরি টেকসই ও আধুনিক ডিজাইনের বেড</p>
+        <div class="price-tag">৳ ৩৫,০০০ - ৳ ১,৫০,০০০</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80" alt="ডাইনিং টেবিল">
+      </div>
+      <div class="card-content">
+        <h3>৬ সিট ডাইনিং টেবিল</h3>
+        <p>পরিবারের জন্য সঠিক সাইজের ডাইনিং টেবিল সেট, মেহগনি কাঠে তৈরি</p>
+        <div class="price-tag">৳ ২৫,০০০ - ৳ ৮০,০০০</div>
+      </div>
+    </div>
+    
+    <!-- Row 2 -->
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="আলমারি">
+      </div>
+      <div class="card-content">
+        <h3>স্লাইডিং দরজা আলমারি</h3>
+        <p>স্পেস সেভিং মাল্টিপারপাস আলমারি, স্লাইডিং দরজা সহ</p>
+        <div class="price-tag">৳ ৩০,০০০ - ৳ ৯০,০০০</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="টিভি স্ট্যান্ড">
+      </div>
+      <div class="card-content">
+        <h3>মডার্ন টিভি স্ট্যান্ড</h3>
+        <p>আধুনিক ডিজাইনের টিভি স্ট্যান্ড, স্টোরেজ স্পেস সহ</p>
+        <div class="price-tag">৳ ১৫,০০০ - ৳ ৫০,০০০</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="স্টাডি টেবিল">
+      </div>
+      <div class="card-content">
+        <h3>স্টাডি টেবিল ও চেয়ার</h3>
+        <p>একাডেমিক ও অফিস ব্যবহারের জন্য আরামদায়ক স্টাডি সেট</p>
+        <div class="price-tag">৳ ১২,০০০ - ৳ ৪০,০০০</div>
+      </div>
+    </div>
+    
+    <!-- Row 3 -->
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="বুকশেলফ">
+      </div>
+      <div class="card-content">
+        <h3>ওয়াল মাউন্টেড বুকশেলফ</h3>
+        <p>দেয়ালে লাগানোর উপযোগী বুকশেলফ, বিভিন্ন সাইজে উপলব্ধ</p>
+        <div class="price-tag">৳ ১০,০০০ - ৳ ৩৫,০০০</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="কফি টেবিল">
+      </div>
+      <div class="card-content">
+        <h3>গ্লাস টপ কফি টেবিল</h3>
+        <p>লিভিং রুমের জন্য এলিগেন্ট গ্লাস টপ কফি টেবিল</p>
+        <div class="price-tag">৳ ৮,০০০ - ৳ ৩০,০০০</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1780&q=80" alt="কমোড">
+      </div>
+      <div class="card-content">
+        <h3>বেডরুম কমোড</h3>
+        <p>বেডরুমের জন্য স্টোরেজ কমোড, ড্রয়ার সহ</p>
+        <div class="price-tag">৳ ১৮,০০০ - ৳ ৬০,০০০</div>
+      </div>
+    </div>
+    
+    <!-- Row 4 -->
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="রকার চেয়ার">
+      </div>
+      <div class="card-content">
+        <h3>কাঠের রকার চেয়ার</h3>
+        <p>ব্যালকনি ও লিভিং রুমের জন্য আরামদায়ক রকার চেয়ার</p>
+        <div class="price-tag">৳ ৬,০০০ - ৳ ২৫,০০০</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1565791389712-6329c562754d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="শো কেস">
+      </div>
+      <div class="card-content">
+        <h3>ডিসপ্লে শো কেস</h3>
+        <p>জিনিসপত্র প্রদর্শনের জন্য গ্লাস শো কেস</p>
+        <div class="price-tag">৳ ২০,০০০ - ৳ ৭০,০০০</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1554295405-abb8fd54f153?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80" alt="কনসোল টেবিল">
+      </div>
+      <div class="card-content">
+        <h3>এন্ট্রি কনসোল টেবিল</h3>
+        <p>ঘরের প্রবেশপথে রাখার জন্য এলিগেন্ট কনসোল টেবিল</p>
+        <div class="price-tag">৳ ১২,০০০ - ৳ ৪৫,০০০</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="head-designer" id="designer">
+  <div class="designer-img">
+    <img src="https://i.ibb.co.com/QFnMvZ2z/Liton-pic.jpg" alt="প্রধান ডিজাইনার লিটন আলী">
+  </div>
+  <div class="designer-info">
+    <h3>প্রধান ডিজাইনার: লিটন আলী</h3>
+    <p>১৫ বছরেরও বেশি অভিজ্ঞতা নিয়ে লিটন আলী ডুবাইয়ের আরব টেকে কাজ করার অভিজ্ঞতা নিয়ে আমাদের টিমে আছেন। তিনি আধুনিক ও ক্লাসিক ডিজাইনের সমন্বয়ে ইউনিক ফার্ণিচার ডিজাইন করেন যা আপনার বাড়ির সৌন্দর্য বহুগুণ বাড়িয়ে দেবে।</p>
+    <p>তার নকশায় তৈরি প্রতিটি ফার্ণিচার টুকরা শুধু ব্যবহারিক নয়, শিল্পকর্মের মতো সৌন্দর্যমণ্ডিত। তিনি প্রতিটি ক্লায়েন্টের প্রয়োজন অনুযায়ী কাস্টম ডিজাইনে বিশেষজ্ঞ।</p>
+    <p>লিটন আলীর ডিজাইন করা ফার্ণিচার শুধু বাংলাদেশেই নয়, বিদেশেও সমান জনপ্রিয়।</p>
+    <div class="experience-badge">
+      <i class="fas fa-award"></i>
+      <span>দুবাই আরব টেক থেকে ৮ বছর অভিজ্ঞতা</span>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="contact">
+  <h2 class="section-title">যোগাযোগ করুন</h2>
+  <div class="contact-info">
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fas fa-phone-alt"></i>
+      </div>
+      <h4>ফোন করুন</h4>
+      <p>০১৮১৬-২৩৪১৫৭</p>
+      <p>০১৯১২-৩৪৫৬৭৮</p>
+      <p>০১৭১০-১২৩৪৫৬</p>
+    </div>
+    
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <h4>আমাদের ঠিকানা</h4>
+      <p>গেন্ডারিয়া, ধূপখোলা মাঠ সংলগ্ন</p>
+      <p>ঢাকা, বাংলাদেশ</p>
+      <p>নির্বিঘ্নে আসতে GMAPS ব্যবহার করুন</p>
+    </div>
+    
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fas fa-clock"></i>
+      </div>
+      <h4>খোলার সময়</h4>
+      <p>শনি - বৃহস্পতি: সকাল ১০:০০ - রাত ৯:০০</p>
+      <p>শুক্রবার: বিকাল ৩:০০ - রাত ৯:০০</p>
+      <p>বন্ধ: সরকারি ছুটির দিন</p>
+    </div>
+    
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="fas fa-concierge-bell"></i>
+      </div>
+      <h4>সেবাসমূহ</h4>
+      <p>কাস্টম ফার্ণিচার ডিজাইন</p>
+      <p>হোম ইন্টেরিয়র ডিজাইন</p>
+      <p>ফ্রি কনসাল্টেশন</p>
+      <p>ডেলিভারি সার্ভিস</p>
+    </div>
+  </div>
+  
+  <div class="social-links">
+    <a href="https://www.facebook.com/share/16qF4GEczg/" target="_blank" title="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://wa.me/8801816234157" target="_blank" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="mailto:info@abedfurniture.com" title="ইমেইল">
+      <i class="far fa-envelope"></i>
+    </a>
+    <a href="https://maps.google.com" target="_blank" title="গুগল ম্যাপ">
+      <i class="fas fa-map-marked-alt"></i>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>আবেদ ফার্ণিচার ও ইন্টেরিয়র</h3>
+      <p>গুণগত মানের ফার্ণিচার ও ইন্টেরিয়র ডিজাইনের জন্য বাংলাদেশের একটি বিশ্বস্ত নাম। ২০১০ সাল থেকে আমরা মানসম্পন্ন সেবা দিয়ে আসছি।</p>
+    </div>
+    
+    <div class="footer-section">
+      <h3>দ্রুত লিংক</h3>
+      <p><a href="#home" style="color:#d4a762; text-decoration:none;">হোম</a></p>
+      <p><a href="#products" style="color:#d4a762; text-decoration:none;">পণ্য সামগ্রী</a></p>
+      <p><a href="#designer" style="color:#d4a762; text-decoration:none;">প্রধান ডিজাইনার</a></p>
+      <p><a href="#contact" style="color:#d4a762; text-decoration:none;">যোগাযোগ</a></p>
+    </div>
+    
+    <div class="footer-section">
+      <h3>যোগাযোগ তথ্য</h3>
+      <p><i class="fas fa-phone" style="margin-right:10px;"></i> ০১৮১৬-২৩৪১৫৭</p>
+      <p><i class="fas fa-map-marker-alt" style="margin-right:10px;"></i> গেন্ডারিয়া, ঢাকা</p>
+      <p><i class="far fa-envelope" style="margin-right:10px;"></i> abedfurniture@gmail.com</p>
+    </div>
+  </div>
+  
+  <div class="copyright">
+    © ২০২৬ আবেদ ফার্ণিচার ও ইন্টেরিয়র | সর্বস্বত্ব সংরক্ষিত
+  </div>
+</footer>
+
+<!-- Floating Buttons -->
+<div class="floating-btn">
+  <a href="https://wa.me/8801816234157" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">WhatsApp এ বার্তা দিন</span>
+  </a>
+  <a href="https://www.facebook.com/share/16qF4GEczg/" target="_blank" class="facebook">
+    <i class="fab fa-facebook-f"></i>
+    <span class="tooltip">ফেসবুক পেজ দেখুন</span>
+  </a>
+  <a href="tel:+8801816234157" class="call">
+    <i class="fas fa-phone-alt"></i>
+    <span class="tooltip">কল করুন</span>
+  </a>
+</div>
+
+<script>
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav a, .cta-button, .footer-section a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    if(this.getAttribute('href').startsWith('#')) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+});
+
+// Highlight active nav link on scroll
+window.addEventListener('scroll', function() {
+  const sections = document.querySelectorAll('.section, .hero, .head-designer');
+  const navLinks = document.querySelectorAll('nav a');
+  
+  let currentSection = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    
+    if (window.scrollY >= (sectionTop - 150)) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+  
+  navLinks.forEach(link => {
+    link.style.background = '';
+    if (link.getAttribute('href') === '#' + currentSection) {
+      link.style.background = '#d4a762';
+      link.style.color = '#1a1200';
+    }
+  });
+});
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Trigger scroll event to set initial active link
+  window.dispatchEvent(new Event('scroll'));
+  
+  // Add animation to cards on scroll
+  const observerOptions = {
+    threshold: 0.1
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all cards
+  document.querySelectorAll('.card').forEach(card => {
+    observer.observe(card);
+  });
+});
+</script>
+
+</body>
+</html>
